@@ -1,20 +1,30 @@
 def bubble_sort(arr)
 	p arr
 	i = 0
-	while i <= 6
-		puts
-		puts i
-		if arr[i + 1] != nil && (arr[i] > arr[i + 1])
-			arr[i], arr[i + 1] = arr[i + 1], arr[i]		
-		elsif array_comparison(arr) == false
-			i = 0
+	j = 0
+	while j <= 6
+		i = 0
+		if array_comparison(arr) == false
+			while i <= 6
+			puts
+			puts i
+				if arr[i + 1] != nil && (arr[i] > arr[i + 1])
+					arr[i], arr[i + 1] = arr[i + 1], arr[i]		
+				end
+
+			p arr
+			i += 1
+			end
+		else
+			break
 		end
-		p arr
-		i += 1
+
+		j += 1
+			
 	end
 	arr
-
 end
+
 
 def array_comparison(arr)
 	i = 0
@@ -32,6 +42,5 @@ def array_comparison(arr)
 end
 
 p bubble_sort([4,3,78,2,0,2])
-p array_comparison([3,4,2,0,2,78])
 
 
